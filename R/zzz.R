@@ -16,3 +16,15 @@
 
   invisible(NULL)
 } # nocov end
+
+.onAttach <- function(libname, pkgname) {
+  # nocov start
+  packageStartupMessage(
+    "blockr.bi is DEPRECATED and no longer maintained.\n",
+    "It has been renamed and moved to 'blockr.viz':\n",
+    "  https://github.com/BristolMyersSquibb/blockr.viz\n",
+    "Please switch with: pak::pak(\"BristolMyersSquibb/blockr.viz\")"
+  )
+  invisible(NULL)
+  # nocov end
+}
